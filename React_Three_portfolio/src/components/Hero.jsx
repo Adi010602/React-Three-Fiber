@@ -24,13 +24,16 @@ const Left =  styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  
 `
 
 
 const Title =  styled.h1`
-font-size: 70px;
+font-size: 61px;
 
+`
+const Line = styled.img`
+  height: 5px;
 `
 
 const SubTitle =  styled.h2`
@@ -38,7 +41,7 @@ color:#0FC2D8 ;
 `
 
 const Desc =  styled.p`
-font-size: 24px;
+font-size: 20px;
 color: lightblue;
 `
 
@@ -80,7 +83,7 @@ const Img = styled.img`
 const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  
 `
 
 
@@ -95,6 +98,7 @@ const Hero = () => {
             Think.   Make. Solve.
           </Title>
           <WhatWeDo>
+          <Line src="./images/line.png" />
           <SubTitle>What We Do</SubTitle>
           </WhatWeDo>
           <Desc>We enjoy creating delightfull, human-centered digital experiences.</Desc>
