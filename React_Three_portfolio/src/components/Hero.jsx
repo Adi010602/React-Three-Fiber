@@ -16,6 +16,7 @@ const Container =  styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
 `
 
 const Left =  styled.div`
@@ -23,15 +24,23 @@ const Left =  styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
 `
 
 
-const Title =  styled.h1``
+const Title =  styled.h1`
+font-size: 70px;
 
-const SubTitle =  styled.h3``
+`
 
-const Desc =  styled.p``
+const SubTitle =  styled.h2`
+color:#0FC2D8 ;
+`
+
+const Desc =  styled.p`
+font-size: 24px;
+color: lightblue;
+`
 
 const Button =  styled.button`
 width:100px;
@@ -45,6 +54,33 @@ font-family: 'Pangolin', cursive;
 `
 const Right =  styled.div`
 flex:3;
+position: relative;
+`
+
+const Img = styled.img`
+  
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+  
+  @keyframes animate{
+    to{
+      transform: translateY(20px);
+    }
+    
+  }
+`
+const WhatWeDo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `
 
 
@@ -56,15 +92,18 @@ const Hero = () => {
       <Container>
         <Left>
           <Title>
-            Think, Make, Solve.
+            Think.   Make. Solve.
           </Title>
+          <WhatWeDo>
           <SubTitle>What We Do</SubTitle>
+          </WhatWeDo>
           <Desc>We enjoy creating delightfull, human-centered digital experiences.</Desc>
           <Button>Learn More</Button>
         </Left>
         <Right>
 
           {/* 3d model   */}
+          <Img src="./images/hero.png"/>
         </Right>
 
       </Container>  
