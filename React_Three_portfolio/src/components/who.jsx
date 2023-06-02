@@ -50,8 +50,8 @@ cursor: pointer;
 font-family: 'Pangolin', cursive;
 `
 const Right =  styled.div`
-flex:1;
-display: flex;
+  flex:1;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   

@@ -1,37 +1,88 @@
 import React from 'react'
 import styled from "styled-components"
 
+const data = [
+  "Web Design",
+  "Development",
+  "Illustrations",
+  "Product Design",
+  "Social Media"
+];
+
 const Section=styled.div`
-    height: 100vh;
-    display: flex;
+       height: 100vh;
+      display: flex;
+    scroll-snap-align: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 
 `
 
-const Container = styled.div`
-  
-`
 
+
+const Container =  styled.div`
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+`
 const Left = styled.div`
-  flex: 2;
-
+  flex: 1;
+  display: flex;
+  align-items: center;
+`
+const List =  styled.ul`
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 15px;
 `
 
-const Right = styled.div`
-  flex: 1;
+const ListItem =  styled.li`
+ 
+font-size: 100px;
+font-weight: bold;
+cursor: pointer;
+color: transparent;
+-webkit-text-stroke: 1px white;
+position: relative;
+
+::after{
+  content: "text";
+ position: absolute;
+  top: 0;
+  bottom:0;
+}
+`
+
+
+const Right =  styled.div`
+  flex:1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 `
-const works = () => {
+
+
+const who = () => {
   return (
     <Section>
       <Container>
-        <Left>abcd</Left>
-        <Right>abcd</Right>
+      <Left>
+        <List>
+          {data.map((item)=>(
+            <ListItem key={item}>{item}</ListItem>
+          ))}
+          <ListItem></ListItem>
+        </List>
+       
+      </Left>
+      <Right>
+   
+      </Right>
       </Container>
     </Section>
   )
 }
 
-export default works
+export default who
