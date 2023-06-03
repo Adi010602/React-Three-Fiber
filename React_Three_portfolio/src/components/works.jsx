@@ -46,11 +46,15 @@ color: transparent;
 -webkit-text-stroke: 1px white;
 position: relative;
 
-::after{
-  content: "text";
- position: absolute;
-  top: 0;
-  bottom:0;
+::after {
+    content: "abcd";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ff002b;
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 `
 
